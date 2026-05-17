@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-codesync-bg: #1e1e1e;
+  --color-codesync-panel: #252526;
+  --color-codesync-sidebar: #333333;
+  --color-codesync-border: #3c3c3c;
+  --color-codesync-accent: #007acc;
+  --color-codesync-accent-hover: #1a8ad4;
+  --color-codesync-terminal: #0c0c0c;
+}
+
+[data-theme="light"] {
+  --color-codesync-bg: #ffffff;
+  --color-codesync-panel: #f3f3f3;
+  --color-codesync-sidebar: #f8f8f8;
+  --color-codesync-border: #e5e5e5;
+  --color-codesync-accent: #0078d4;
+  --color-codesync-accent-hover: #106ebe;
+  --color-codesync-terminal: #fafafa;
+  color-scheme: light;
+}
+
+[data-theme="light"] body {
+  color: #1f2937;
+}
+
+[data-theme="light"] .text-white {
+  color: #111827;
+}
+
+[data-theme="light"] .text-gray-400 {
+  color: #6b7280;
+}
+
+[data-theme="light"] .text-gray-300 {
+  color: #4b5563;
+}
+
+[data-theme="light"] .text-gray-500 {
+  color: #6b7280;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-codesync-bg);
+  color: #e5e7eb;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.remote-cursor-glyph {
+  background: var(--cursor-color, #007acc);
+  width: 2px !important;
+  margin-left: 2px;
+}
