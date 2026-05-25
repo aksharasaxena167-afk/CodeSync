@@ -164,7 +164,7 @@ export function useRoomSocket(roomId, username, { isCreate = false } = {}) {
     const onConnectError = (err) => {
       if (cancelled) return;
       setJoinError(
-        `Cannot reach server at ${import.meta.env.VITE_SOCKET_URL || "http://localhost:5000"}. ${err.message}`
+        `Cannot reach server at ${import.meta.env.VITE_SOCKET_URL || "https://codesync-backend-rx0w.onrender.com"}. ${err.message}`
       );
     };
 

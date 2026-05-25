@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_SOCKET_URL || "https://codesync-backend-rx0w.onrender.com";
 
 export async function checkRoomExists(roomId) {
   const response = await fetch(`${API_URL}/api/rooms/${encodeURIComponent(roomId)}`);
